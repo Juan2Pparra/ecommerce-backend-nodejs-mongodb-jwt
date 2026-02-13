@@ -1,0 +1,311 @@
+/* -------------------- RESET Y GENERAL -------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* -------------------- HEADER Y NAVEGACIÓN -------------------- */
+header {
+  background-color: #6a0dad;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.barra-navegacion {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.titulo {
+  font-size: 2.5em;
+  color: white;
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.menu a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para mostrar el nombre del usuario */
+#usuarioNombre {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #ffd700;
+  cursor: default;
+}
+
+/* -------------------- PÁGINA PRINCIPAL / CATÁLOGO -------------------- */
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.catalogo h2 {
+  font-size: 2em;
+  text-align: center;
+  color: #6a0dad;
+  margin-bottom: 30px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.producto {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+.producto p {
+  margin-bottom: 15px;
+}
+
+/* -------------------- BOTONES GLOBALES -------------------- */
+button,
+button[type="submit"] {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+button[type="submit"]:hover {
+  background-color: #50108c;
+}
+
+/* Botón para cerrar sesión */
+#logoutButton {
+  background-color: #d93025;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  margin-left: 15px;
+  border-radius: 6px;
+}
+
+#logoutButton:hover {
+  background-color: #a02020;
+}
+
+/* -------------------- LOGIN Y REGISTRO -------------------- */
+body.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.login-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-container .titulo {
+  color: #6a0dad;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background-color: #ddd;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: #6a0dad;
+  color: white;
+}
+
+.formulario {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario.active {
+  display: flex;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Mostrar mensajes de error o éxito debajo de los inputs */
+.error-message, .success-message {
+  font-size: 0.9em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.error-message {
+  color: #d93025;
+}
+
+.success-message {
+  color: #188038;
+}
+
+/* -------------------- FORMULARIO PUBLICAR -------------------- */
+.form-publicar {
+  max-width: 400px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-publicar h2 {
+  text-align: center;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.form-publicar form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* -------------------- CARRITO DE COMPRAS -------------------- */
+.carrito h2 {
+  text-align: center;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.total {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.total h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
+}
+.perfil-menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.perfil-nombre {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.perfil-dropdown {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 12px;
+  z-index: 100;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+.perfil-dropdown.visible {
+  display: block;
+}
+
+.perfil-dropdown p {
+  margin: 5px 0;
+}
+
+.perfil-dropdown button {
+  background-color: #d93025;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.perfil-dropdown button:hover {
+  background-color: #a02020;
+}

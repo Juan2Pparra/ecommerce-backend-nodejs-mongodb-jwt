@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publicar Diseño</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header>
+    <div class="barra-navegacion">
+      <h1 class="titulo">Publicar Diseño</h1>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="formulario-publicar">
+    <form id="formPublicar" enctype="multipart/form-data">
+      <input type="text" name="nombre" placeholder="Nombre del diseño" required />
+      <textarea name="descripcion" placeholder="Descripción"></textarea>
+      <input type="number" name="precio" placeholder="Precio" required min="0" />
+      <input type="file" name="imagen" accept="image/*" required />
+      <button type="submit">Publicar</button>
+      <p id="mensaje"></p>
+    </form>
+  </main>
+
+  <script src="js/publicar.js"></script>
+</body>
+</html>

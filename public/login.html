@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login y Registro - Estampados VIP Store</title>
+  <link rel="stylesheet" href="index.css" />
+  
+</head>
+<body class="login-body">
+  
+
+  <div class="login-container">
+    <h1 class="titulo">Bienvenido a Estampados VIP Store</h1>
+
+    <div class="tabs">
+      <button class="tab-button active" data-target="loginForm">Iniciar Sesión</button>
+      <button class="tab-button" data-target="registerForm">Registrarse</button>
+    </div>
+
+    <!-- FORMULARIO LOGIN -->
+    <form id="loginForm" class="formulario active">
+      <input type="email" id="loginEmail" name="email" placeholder="Correo electrónico" required />
+      <input type="password" id="loginPassword" name="password" placeholder="Contraseña" required minlength="6" />
+      <button type="submit">Entrar</button>
+      <p id="loginError" class="error-message" style="display:none;"></p>
+    </form>
+
+    <!-- FORMULARIO REGISTRO -->
+    <form id="registerForm" class="formulario">
+      <input type="text" id="nombreRegistro" name="nombre" placeholder="Nombre completo" required />
+      <input type="email" id="emailRegistro" name="email" placeholder="Correo electrónico" required />
+      <input type="password" id="passwordRegistro" name="password" placeholder="Contraseña" required minlength="6" />
+      <select id="rolRegistro" name="rol" required>
+        <option value="" disabled selected>Selecciona tu rol</option>
+        <option value="comprador">Comprador</option>
+        <option value="diseñador">Diseñador</option>
+      </select>
+      <button type="submit">Registrar</button>
+      <p id="registerError" class="error-message" style="display:none;"></p>
+      <p id="registerSuccess" class="success-message" style="display:none;"></p>
+    </form>
+  </div>
+
+  <!-- Cargar el JS externo -->
+  <script src="js/login.js"></script>
+</body>
+</html>
